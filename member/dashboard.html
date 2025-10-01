@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gym Management</title>
+    <link rel="stylesheet" href="member_styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo">
+                <div class="text">
+                    <span class="welcome">Welcome,</span>
+                    <span class="member-name">Member</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link active">
+                        <a href="dashboard.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="workout.html">
+                            <i class='bx bx-dumbbell icon'></i>
+                            <span class="text nav-text">Workout</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <button class="dropdown-btn">
+                            <i class='bx bx-bowl-rice icon'></i>
+                            <span class="text nav-text">Nutrition</span>
+                            <i class='bx bx-chevron-down dropdown-arrow'></i>
+                        </button>
+                    </li>
+                    <div class="dropdown-container">
+                        <a href="nutrition-food.html">
+                            <span class="text nav-text">Food</span>
+                        </a>
+                        <a href="nutrition-supplement.html">
+                            <span class="text nav-text">Supplement</span>
+                        </a>
+                    </div>
+                    
+                    <li class="nav-link">
+                        <a href="coaches.html">
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text">Coaches</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="profile.html">
+                            <i class='bx bxs-user icon'></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-cont">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out-circle icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div class="dashboard-header">
+                <h1>Dashboard</h1>
+                <p>Welcome back! Here's your fitness overview for today.</p>
+            </div>
+            
+            <!-- Quick Stats Row -->
+            <div class="quick-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class='bx bx-dumbbell'></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>4</h3>
+                        <p>Workouts This Week</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class='bx bx-bowl-rice'></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>2,150</h3>
+                        <p>Calories Today</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class='bx bx-timer'></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>45 min</h3>
+                        <p>Last Workout</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class='bx bx-trending-up'></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>+2.5kg</h3>
+                        <p>Strength Gain</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Today's Workout -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Today's Workout</h2>
+                        <a href="workout.html" class="view-all">View All</a>
+                    </div>
+                    <div class="workout-card">
+                        <div class="workout-info">
+                            <h3>Upper Body Strength Training</h3>
+                            <p class="workout-time">45 minutes • 2:30 PM</p>
+                            <div class="workout-exercises">
+                                <span class="exercise-tag">Bench Press</span>
+                                <span class="exercise-tag">Pull-ups</span>
+                                <span class="exercise-tag">Shoulder Press</span>
+                            </div>
+                        </div>
+                        <div class="workout-status">
+                            <span class="status-completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nutrition Summary -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Nutrition Today</h2>
+                        <a href="nutrition-food.html" class="view-all">View All</a>
+                    </div>
+                    <div class="nutrition-card">
+                        <div class="calorie-progress">
+                            <div class="progress-info">
+                                <span>2,150 / 2,500 calories</span>
+                                <span>86%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 86%"></div>
+                            </div>
+                        </div>
+                        <div class="nutrition-macros">
+                            <div class="macro-item">
+                                <span class="macro-label">Protein</span>
+                                <span class="macro-value">120g</span>
+                            </div>
+                            <div class="macro-item">
+                                <span class="macro-label">Carbs</span>
+                                <span class="macro-value">250g</span>
+                            </div>
+                            <div class="macro-item">
+                                <span class="macro-label">Fat</span>
+                                <span class="macro-value">85g</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Progress -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Weekly Progress</h2>
+                        <a href="workout.html" class="view-all">View All</a>
+                    </div>
+                    <div class="progress-card">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Workouts</span>
+                                <span>4/5</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Cardio</span>
+                                <span>2/3</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 67%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Nutrition Goals</span>
+                                <span>5/7</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 71%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Recent Activity</h2>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class='bx bx-dumbbell'></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Completed Upper Body Workout</h4>
+                                <p>2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class='bx bx-bowl-rice'></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Logged Lunch Meal</h4>
+                                <p>4 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class='bx bx-trending-up'></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>New Personal Record</h4>
+                                <p>Yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Sessions -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Upcoming Sessions</h2>
+                        <a href="coaches.html" class="view-all">View All</a>
+                    </div>
+                    <div class="sessions-card">
+                        <div class="session-item">
+                            <div class="session-time">
+                                <span class="time">10:00 AM</span>
+                                <span class="date">Tomorrow</span>
+                            </div>
+                            <div class="session-details">
+                                <h4>Personal Training</h4>
+                                <p>With Coach Sarah</p>
+                            </div>
+                        </div>
+                        <div class="session-item">
+                            <div class="session-time">
+                                <span class="time">6:00 PM</span>
+                                <span class="date">Friday</span>
+                            </div>
+                            <div class="session-details">
+                                <h4>Group Fitness</h4>
+                                <p>HIIT Class</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Quick Actions</h2>
+                    </div>
+                    <div class="quick-actions">
+                        <a href="workout.html" class="action-btn">
+                            <i class='bx bx-plus'></i>
+                            <span>Start Workout</span>
+                        </a>
+                        <a href="nutrition-food.html" class="action-btn">
+                            <i class='bx bx-bowl-rice'></i>
+                            <span>Log Meal</span>
+                        </a>
+                        <a href="coaches.html" class="action-btn">
+                            <i class='bx bx-calendar'></i>
+                            <span>Book Session</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
