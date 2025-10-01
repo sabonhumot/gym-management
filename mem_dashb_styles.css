@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #21b9c5;
+    --body-color: #d2d2d3;
+    --sidebar-color: #ffffff;
+    --text-color: rgb(78, 78, 78);
+    --accent: #1c1c1c;
+    --font-family: 'Poppins', sans-serif;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+body {
+    height: 100vh;
+    background: var(--body-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: var(--sidebar-color);
+    transition: var(--tran-03);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close{
+    width: 80px;
+}
+
+.sidebar.close .text{
+    opacity: 0;
+}
+
+
+.sidebar li{
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.sidebar li .icon {
+    font-size: 20px;
+    min-width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    margin-left: -10px; /* Add this line, adjust value as needed */
+}
+
+.sidebar li .text {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+
+.sidebar li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover {
+    background: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: var(--sidebar-color);
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar .menu-bar{
+    height: calc(100% - 105px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Modify if needed (Logo)*/
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.sidebar .logo img {
+    width: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.sidebar .logo .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar .welcome {
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.sidebar .member-name {
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.sidebar .dropdown {
+    position: relative;
+}
+
+.sidebar .dropdown .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background: transparent; /* Inherit sidebar background */
+    box-shadow: none;
+    position: static;
+    margin-left: 0; /* Remove the left margin */
+    padding-left: 32px; /* Indent submenu under Nutrition */
+    border-radius: 0;
+}
+
+.sidebar .dropdown.open .dropdown-menu {
+    display: flex;
+}
+
+.sidebar .dropdown .dropdown-arrow {
+    margin-left: auto;
+    transition: transform 0.3s;
+}
+
+.sidebar .dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Optional: style dropdown items */
+.sidebar .dropdown .dropdown-menu li a {
+    padding: 10px 16px;
+    font-size: 15px;
+    color: var(--text-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .dropdown .dropdown-menu li a:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+
+
+
+
